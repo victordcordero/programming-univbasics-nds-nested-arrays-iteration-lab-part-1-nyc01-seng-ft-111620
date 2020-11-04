@@ -8,18 +8,13 @@ array_of_arrays = [
  [23, 41]
 ]
 
-count = 0
-
-while count < array_of_arrays.length do
-  p array_of_arrays[count]
-
-  inner_count = 0
-  while inner_count < array_of_arrays[count].even? do
-    p array_of_arrays[count][inner_count]
-    inner_count += 1
+cdef find_even_values(src)
+  row_index = 0
+  while row_index < src.count do
+    element_index = 0
+    while element_index < src[row_index].count do
+      element_index += 1
+    end
+    row_index += 1
   end
-
-  count += 1
-end
-
 end
